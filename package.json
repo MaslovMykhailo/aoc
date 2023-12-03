@@ -1,0 +1,16 @@
+{
+  "name": "aoc",
+  "version": "1.0.0",
+  "description": "Advent of code",
+  "main": "index.js",
+  "author": "Mykhailo Maslov <maslov.mikhail2000@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "aoc-login": "run aoc-kit login",
+    "aoc-run": "run aoc-kit run -y 2023"
+  },
+  "dependencies": {
+    "aoc-kit": "^1.1.6"
+  },
+  "packageManager": "yarn@4.0.2"
+}
