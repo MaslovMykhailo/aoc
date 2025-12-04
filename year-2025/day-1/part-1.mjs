@@ -35,7 +35,7 @@ export const MAX_POSITION = 99;
 
 export const makeMove = ({direction, steps}, position) => {
     const diff = direction === 'L' ? -1 : 1;
-    const next = (position + diff * (steps) % (MAX_POSITION + 1));
+    const next = (position + diff * steps) % (MAX_POSITION + 1);
 
     if (next < MIN_POSITION) {
         return next + MAX_POSITION + 1;

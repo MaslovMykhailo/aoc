@@ -9,7 +9,7 @@ import {
 
 const makeMoveAndCalcPassingTarget = ({direction, steps}, position) => {
     const diff = direction === 'L' ? -1 : 1;
-    let next = (position + (diff * steps) % (MAX_POSITION + 1));
+    let next = (position + diff * steps) % (MAX_POSITION + 1);
     let passingTargetTimes = Math.floor(Math.abs(position + (diff * steps)) / (MAX_POSITION + 1));
 
     if (next < MIN_POSITION) {
@@ -22,12 +22,11 @@ const makeMoveAndCalcPassingTarget = ({direction, steps}, position) => {
 
     if (next > MAX_POSITION) {
         next = next - MAX_POSITION - 1;
-        passingTargetTimes++;
-    }
 
-    if (next === MIN_POSITION) {
-        passingTargetTimes--;
-    };
+        if (position !== MIN_POSITION) {
+            passingTargetTimes++;
+        };
+    }
 
     return {
         next,
