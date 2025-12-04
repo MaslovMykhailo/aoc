@@ -9,8 +9,5 @@
     "aoc-login": "run aoc-kit login",
     "aoc-run": "run aoc-kit run -y 2023"
   },
-  "dependencies": {
-    "aoc-kit": "^1.1.6"
-  },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.12.0"
 }
